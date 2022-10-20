@@ -9,9 +9,8 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
-import pages.MainPages;
-import pages.ThirdTask.CookiePage;
-import pages.ThirdTask.ModalWindowThirdTask;
+import pages.thirdTask.CookiePage;
+import pages.thirdTask.ModalWindowThirdTask;
 
 public class ThirdTaskTest {
     private WebDriver driver;
@@ -40,10 +39,10 @@ public class ThirdTaskTest {
 
 
     }
-//    @AfterEach
-//    public void close(){
-//        driver.quit();
-//    }
+    @AfterEach
+    public void close(){
+        driver.quit();
+    }
 
 }
 

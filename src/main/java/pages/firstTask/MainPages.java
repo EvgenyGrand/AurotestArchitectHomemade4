@@ -1,12 +1,9 @@
-package pages;
+package pages.firstTask;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-
-import java.util.Collections;
-import java.util.List;
+import pages.AbsBasePages;
 
 public class MainPages extends AbsBasePages {
 

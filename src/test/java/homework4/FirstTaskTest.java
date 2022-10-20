@@ -6,11 +6,7 @@ import factory.WebDriverFactory;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
-import pages.MainPages;
-import pages.SearchPages;
-
-
-import java.util.concurrent.TimeUnit;
+import pages.firstTask.MainPages;
 
 public class FirstTaskTest {
     private WebDriver driver;

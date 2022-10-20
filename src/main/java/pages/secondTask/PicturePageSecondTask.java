@@ -23,20 +23,15 @@ public class PicturePageSecondTask extends AbsBasePages {
     @FindBy(css="img[src='assets/images/p5.jpg']")
     private WebElement picture;
 
-    @FindBy(css="div[class=\"pp_pic_holder light_rounded\"]")
-    private WebElement modalPicture;
+//    @FindBy(css="div[class=\"pp_pic_holder light_rounded\"]")
+//    private WebElement modalPicture;
 
     public void openModalWindow() throws InterruptedException {
         driver.manage().window().maximize();
         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", picture);
-        WebDriverWait wait = new WebDriverWait(driver, 5);
-        wait.until(ExpectedConditions.visibilityOf(picture));
-       Actions actions = new Actions(driver);
-       actions.moveToElement(picture).build().perform();
+        picture.click();
 
-    }
-    public void checkmodalWindow(){
-        Assertions.assertTrue(modalPicture.isDisplayed());
+
     }
 
 }

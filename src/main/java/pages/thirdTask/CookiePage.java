@@ -1,4 +1,4 @@
-package pages.ThirdTask;
+package pages.thirdTask;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

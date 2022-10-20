@@ -9,6 +9,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
+import pages.secondTask.CheckmodalWindow;
 import pages.secondTask.PicturePageSecondTask;
 
 public class SecondTaskTest {
@@ -29,9 +30,11 @@ public class SecondTaskTest {
     @Test
     public void testOpenModalWindow() throws InterruptedException {
         PicturePageSecondTask picturePageSecondTask = new PicturePageSecondTask(driver);
+        CheckmodalWindow checkmodalWindow = new CheckmodalWindow(driver);
         picturePageSecondTask.openSecondTask();
             picturePageSecondTask.openModalWindow();
-            picturePageSecondTask.checkmodalWindow();
+            checkmodalWindow.checkModalWindow();
+
 
 
     }
