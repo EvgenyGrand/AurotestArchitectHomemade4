@@ -20,16 +20,18 @@ public class PicturePageSecondTask extends AbsBasePages {
     @FindBy(css="input[type='search'][placeholder='Search here...']")
     private WebElement scroll;
 
-    @FindBy(css="img[src='assets/images/p5.jpg']")
+    @FindBy(css="body > section.w3-gallery.py-5 > div > ul.portfolio-area.clearfix.p-0.m-0 > li:nth-child(4) > span > a > div.content-overlay")
     private WebElement picture;
 
-//    @FindBy(css="div[class=\"pp_pic_holder light_rounded\"]")
-//    private WebElement modalPicture;
 
     public void openModalWindow() throws InterruptedException {
-        driver.manage().window().maximize();
-        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", picture);
-        picture.click();
+
+        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView()", picture);
+        WebDriverWait wait = new WebDriverWait(driver, (5));
+        wait.until(ExpectedConditions.visibilityOf(picture));
+        ((JavascriptExecutor)driver).executeScript("arguments[0].click", picture);
+
+
 
 
     }
