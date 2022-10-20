@@ -28,11 +28,11 @@ public class SecondTaskTest {
     }
 
     @Test
-    public void testOpenModalWindow(){
+    public void testOpenModalWindow() throws InterruptedException {
         PicturePageSecondTask picturePageSecondTask = new PicturePageSecondTask(driver);
+        picturePageSecondTask.openSecondTask();
         picturePageSecondTask.openModalWindow();
-        picturePageSecondTask.openModalWindow();
-
+        picturePageSecondTask.checkmodalWindow();
 
     }
 //    @AfterEach

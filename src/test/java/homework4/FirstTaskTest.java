@@ -7,6 +7,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
 import pages.MainPages;
+import pages.SearchPages;
 
 
 import java.util.concurrent.TimeUnit;
@@ -30,8 +31,7 @@ public class FirstTaskTest {
     public void testCheckDDC(){
         MainPages mainPages = new MainPages(driver);
         mainPages.open();
-        mainPages
-                .searchOtus("Отус")
+        mainPages.searchOtus("Отус")
                 .checkRecord(1);
 
 
