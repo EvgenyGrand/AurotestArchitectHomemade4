@@ -29,7 +29,8 @@ public class ThirdTaskTest {
     }
 
     @Test
-    public void testCheckCoocke() throws InterruptedException {
+    public void testCheckCookie() throws InterruptedException {
+        driver.manage().window().maximize();
         CookiePage cookiePage = new CookiePage(driver);
         ModalWindowThirdTask modalWindowThirdTask = new ModalWindowThirdTask(driver);
         cookiePage.openThirdTask();

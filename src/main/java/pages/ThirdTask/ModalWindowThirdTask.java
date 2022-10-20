@@ -26,9 +26,9 @@ public class ModalWindowThirdTask extends CookiePage{
         WebDriverWait wait = new WebDriverWait(driver, 5);
         wait.until(ExpectedConditions.visibilityOf(login));
         login.clear();
-        login.sendKeys("Evgeny.Grand@mail.ru");
+        login.sendKeys(inputLogin());
         password.clear();
-        password.sendKeys("Lufthansa12");
+        password.sendKeys(inputPassword());
         buttonLK.click();
     }
     public void getCookieInConsole(){

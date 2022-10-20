@@ -25,6 +25,8 @@
         <base.url>https://duckduckgo.com/</base.url>
         <second.url>https://demo.w3layouts.com/demos_new/template_demo/03-10-2020/photoflash-liberty-demo_Free/685659620/web/index.html?_ga=2.181802926.889871791.1632394818-2083132868.1632394818</second.url>
         <third.url>https://otus.ru</third.url>
+        <login>Evgeny.Grand@mail.ru</login>
+        <password>Lufthansa12</password>
         <test.project.language>RU</test.project.language>
 
         <webdriver.timeouts.implicitlywait>5000</webdriver.timeouts.implicitlywait>
@@ -101,6 +103,8 @@
                         <base.url>${base.url}</base.url>
                         <second.url>${second.url}</second.url>
                         <third.url>${third.url}</third.url>
+                        <login>${login}</login>
+                        <password>${password}</password>
                         <test.project.status>test</test.project.status>
                         <test.project.language>${test.project.language}</test.project.language>
                     </systemPropertyVariables>
