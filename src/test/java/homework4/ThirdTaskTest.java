@@ -9,9 +9,11 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
-import pages.secondTask.PicturePageSecondTask;
+import pages.MainPages;
+import pages.ThirdTask.CookiePage;
+import pages.ThirdTask.ModalWindowThirdTask;
 
-public class SecondTaskTest {
+public class ThirdTaskTest {
     private WebDriver driver;
 
     @BeforeAll
@@ -27,16 +29,21 @@ public class SecondTaskTest {
     }
 
     @Test
-    public void testOpenModalWindow() throws InterruptedException {
-        PicturePageSecondTask picturePageSecondTask = new PicturePageSecondTask(driver);
-        picturePageSecondTask.openSecondTask();
-            picturePageSecondTask.openModalWindow();
-            picturePageSecondTask.checkmodalWindow();
+    public void testCheckCoocke() throws InterruptedException {
+        CookiePage cookiePage = new CookiePage(driver);
+        ModalWindowThirdTask modalWindowThirdTask = new ModalWindowThirdTask(driver);
+        cookiePage.openThirdTask();
+        cookiePage.clickRegistrationButton();
+        modalWindowThirdTask.inputCreds();
+        modalWindowThirdTask.getCookieInConsole();
 
 
     }
-    @AfterEach
-    public void close(){
-        driver.quit();
-    }
+//    @AfterEach
+//    public void close(){
+//        driver.quit();
+//    }
+
 }
+
+

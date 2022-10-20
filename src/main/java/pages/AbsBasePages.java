@@ -7,6 +7,7 @@ public abstract class AbsBasePages {
 
     private String hostname = System.getProperty("base.url");
     private String hostnameTaskSecond = System.getProperty("second.url");
+    private String hostnameTaskThree = System.getProperty("third.url");
 
     protected WebDriver driver;
 
@@ -20,6 +21,9 @@ public abstract class AbsBasePages {
 
     public void openSecondTask(){
         driver.get(hostnameTaskSecond);
+    }
+    public void openThirdTask(){
+        driver.get(hostnameTaskThree);
     }
 }
 
