@@ -22,7 +22,8 @@
         <thread.count>32</thread.count>
 
         <browser>chrome</browser>
-        <base.url>https://otus.ru</base.url>
+        <base.url>https://duckduckgo.com/</base.url>
+        <second.url>https://demo.w3layouts.com/demos_new/template_demo/03-10-2020/photoflash-liberty-demo_Free/685659620/web/index.html?_ga=2.181802926.889871791.1632394818-2083132868.1632394818</second.url>
         <test.project.language>RU</test.project.language>
 
         <webdriver.timeouts.implicitlywait>5000</webdriver.timeouts.implicitlywait>
@@ -65,15 +66,9 @@
     <profiles>
         <profile>
             <id>production</id>
-            <properties>
-                <webdriver.firsttask.url>https://duckduckgo.com</webdriver.firsttask.url>
-            </properties>
         </profile>
         <profile>
             <id>test</id>
-            <properties>
-                <webdriver.base.url>https://test.otus.ru</webdriver.base.url>
-            </properties>
         </profile>
     </profiles>
 
@@ -103,6 +98,7 @@
                         <webdriver.timeouts.implicitlywait>${webdriver.timeouts.implicitlywait}
                         </webdriver.timeouts.implicitlywait>
                         <base.url>${base.url}</base.url>
+                        <second.url>${second.url}</second.url>
                         <test.project.status>test</test.project.status>
                         <test.project.language>${test.project.language}</test.project.language>
                     </systemPropertyVariables>

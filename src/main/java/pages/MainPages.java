@@ -14,7 +14,6 @@ public class MainPages extends AbsBasePages {
         super(driver);
 
 
-
     }
 
     @FindBy(id = "search_form_input_homepage")
