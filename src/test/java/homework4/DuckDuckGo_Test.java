@@ -9,7 +9,8 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
-import tasks.FirstTask;
+import pages.MainPages;
+
 
 import java.util.concurrent.TimeUnit;
 
@@ -30,8 +31,12 @@ public class DuckDuckGo_Test {
     }
 
     @Test
-    public void Test_Check_DDC(){
-        new FirstTask(driver).open();
+    public void testCheckDDC(){
+        MainPages mainPages = new MainPages(driver);
+        mainPages.open();
+        mainPages
+                .searchOtus("Отус")
+                .checkRecord(1);
        
 
     }
