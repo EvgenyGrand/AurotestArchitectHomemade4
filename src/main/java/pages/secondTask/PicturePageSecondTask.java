@@ -17,21 +17,17 @@ public class PicturePageSecondTask extends AbsBasePages {
     public PicturePageSecondTask(WebDriver driver) {
         super(driver);
     }
-    @FindBy(css="input[type='search'][placeholder='Search here...']")
+
+    @FindBy(css = "input[type='search'][placeholder='Search here...']")
     private WebElement scroll;
 
-    @FindBy(css="body > section.w3-gallery.py-5 > div > ul.portfolio-area.clearfix.p-0.m-0 > li:nth-child(4) > span > a > div.content-overlay")
+    @FindBy(css = "a[href='assets/images/p4.jpg'] >div[class='content-overlay']")
     private WebElement picture;
 
 
     public void openModalWindow() throws InterruptedException {
         driver.manage().window().maximize();
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", picture);
-        WebDriverWait wait = new WebDriverWait(driver, (5));
-        wait.until(ExpectedConditions.visibilityOf(picture));
-     ((JavascriptExecutor)driver).executeScript("arguments[0].click();",picture);
-
-
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", picture);
 
 
     }

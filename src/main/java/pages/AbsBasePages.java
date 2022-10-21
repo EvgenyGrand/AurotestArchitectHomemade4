@@ -35,5 +35,8 @@ public abstract class AbsBasePages {
         System.getProperty(password);
         return password;
     }
+    public void close(){
+        driver.quit();
+  }
 }
 
