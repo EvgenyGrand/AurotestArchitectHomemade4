@@ -12,19 +12,20 @@ public class FirstTaskTest {
     private WebDriver driver;
 
     @BeforeAll
-    public static void init(){
+    public static void init() {
         WebDriverManager.chromedriver().setup();
 
     }
+
     @BeforeEach
-    public  void initDriver() throws BrowserNotSupportException {
+    public void initDriver() throws BrowserNotSupportException {
 
         driver = new WebDriverFactory().getDriver(DriverData.CHROME, null);
 
     }
 
     @Test
-    public void testCheckDDC(){
+    public void testCheckDDC() {
         MainPages mainPages = new MainPages(driver);
         mainPages.open();
         mainPages.searchOtus("Отус")
@@ -32,9 +33,14 @@ public class FirstTaskTest {
 
 
     }
-    @AfterEach
-    public void close(){
-        driver.quit();
-    }
 
+    @AfterEach
+    public void close() {
+        if (this.driver != null) {
+            this.driver.close();
+            this.driver.quit();
+        }
+
+
+    }
 }

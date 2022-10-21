@@ -40,10 +40,13 @@ public class ThirdTaskTest {
 
     }
     @AfterEach
-    public void close(){
-        driver.quit();
+    public void close() {
+        if (this.driver != null) {
+            this.driver.close();
+            this.driver.quit();
+        }
     }
 
-}
+    }
 
 
