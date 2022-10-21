@@ -3,6 +3,9 @@ pages\secondTask\PicturePageSecondTask.class
 exception\BrowserNotSupportException.class
 factory\WebDriverFactory.class
 pages\AbsBasePages.class
-pages\MainPages.class
-pages\SearchPages.class
+pages\firstTask\MainPages.class
+pages\secondTask\CheckmodalWindow.class
+pages\thirdTask\ModalWindowThirdTask.class
+pages\thirdTask\CookiePage.class
+pages\firstTask\SearchPages.class
 data\DriverData.class
