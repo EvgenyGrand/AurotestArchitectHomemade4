@@ -25,11 +25,11 @@ public class PicturePageSecondTask extends AbsBasePages {
 
 
     public void openModalWindow() throws InterruptedException {
-
-        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView()", picture);
+        driver.manage().window().maximize();
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", picture);
         WebDriverWait wait = new WebDriverWait(driver, (5));
         wait.until(ExpectedConditions.visibilityOf(picture));
-        ((JavascriptExecutor)driver).executeScript("arguments[0].click", picture);
+     ((JavascriptExecutor)driver).executeScript("arguments[0].click();",picture);
 
 
 
