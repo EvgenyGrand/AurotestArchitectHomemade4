@@ -38,8 +38,8 @@ public class SecondTaskTest {
 
 
     }
-//    @AfterEach
-//    public void close(){
-//        driver.quit();
-//    }
+    @AfterEach
+    public void close(){
+        driver.quit();
+    }
 }
