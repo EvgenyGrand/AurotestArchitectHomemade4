@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pages.AbsBasePages;
 
 public class ModalWindowThirdTask extends CookiePage{
     public ModalWindowThirdTask(WebDriver driver) {
@@ -17,12 +18,13 @@ public class ModalWindowThirdTask extends CookiePage{
    @FindBy(css = "input[type='password']")
    private WebElement password;
 
-    @FindBy(css = "button[class*='new-button new-button_full']")
+    @FindBy(css = "button[class$='new-button_md'][type='submit']")
    private WebElement buttonLK;
 
     public void inputCreds(){
-        WebDriverWait wait = new WebDriverWait(driver, 5);
-        wait.until(ExpectedConditions.visibilityOf(login));
+//        WebDriverWait wait = new WebDriverWait(driver, 5);
+//        wait.until(ExpectedConditions.visibilityOf(login));
+        explicitWait(login,5);
         login.clear();
         login.sendKeys(inputLogin());
         password.clear();
@@ -32,4 +34,6 @@ public class ModalWindowThirdTask extends CookiePage{
     public void getCookieInConsole(){
         System.out.println(driver.manage().getCookies());
     }
+
+
 }

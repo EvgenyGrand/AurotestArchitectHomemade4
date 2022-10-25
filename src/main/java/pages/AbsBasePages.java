@@ -1,7 +1,10 @@
 package pages;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public abstract class AbsBasePages {
 
@@ -12,29 +15,40 @@ public abstract class AbsBasePages {
     private String password = System.getProperty("password");
 
     protected WebDriver driver;
+    protected WebDriverWait wait;
 
-    public AbsBasePages(WebDriver driver){
-        this.driver=driver;
+    public AbsBasePages(WebDriver driver) {
+        this.driver = driver;
+        this.wait = wait;
         PageFactory.initElements(driver, this);
     }
-    public void open(){
+
+    public void open() {
         driver.get(hostname);
     }
 
-    public void openSecondTask(){
+    public void openSecondTask() {
         driver.get(hostnameTaskSecond);
     }
-    public void openThirdTask(){
+
+    public void openThirdTask() {
         driver.get(hostnameTaskThree);
     }
-    public CharSequence inputLogin(){
+
+    public CharSequence inputLogin() {
         System.getProperty(login);
         return login;
     }
-    public CharSequence inputPassword(){
+
+    public CharSequence inputPassword() {
         System.getProperty(password);
         return password;
     }
 
+    public void explicitWait(WebElement element, int time) {
+        WebDriverWait wait = new WebDriverWait(driver, time);
+        wait.until(ExpectedConditions.visibilityOf(element));
+
+    }
 }
 

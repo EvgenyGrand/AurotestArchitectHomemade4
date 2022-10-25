@@ -34,7 +34,7 @@ public class SecondTaskTest {
         picturePageSecondTask.openSecondTask();
             picturePageSecondTask.openModalWindow();
             checkmodalWindow.checkModalWindow();
-//            checkmodalWindow.checkModalWindow(3);
+
 
 
 

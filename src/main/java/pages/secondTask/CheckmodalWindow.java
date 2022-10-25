@@ -17,31 +17,23 @@ public class CheckmodalWindow extends PicturePageSecondTask {
         super(driver);
     }
 
-    //Код для поиска всех картинок, и получения по поиску первой картинки не сработает,
-    // так как в модальном окне открывается только одна картинка, и именно ее нам нужно проверить на то,
-    // что она открылась в модальном окне.
-    //Соответственно, старый код считаю верным
-
-
-//    @FindBy(css = "body > section.w3-gallery.py-5 > div")
-//    private WebElement modalPicture;
-//    List<WebElement> modalPictures;
-
-//    public void checkModalWindow(int index) {
-//        WebDriverWait wait = new WebDriverWait(driver, (5));
-//        wait.until(ExpectedConditions.visibilityOf(modalPicture));
-//        Assertions.assertTrue(modalPictures.get(index).isDisplayed());
-//    }
-
-    @FindBy(css = "div[class*=\"pp_pic_holder\"]")
+    @FindBy(css = "div.pp_pic_holder.light_rounded")
     private WebElement modalPicture;
 
     public void checkModalWindow() {
-        WebDriverWait wait = new WebDriverWait(driver, (5));
-        wait.until(ExpectedConditions.visibilityOf(modalPicture));
+        explicitWait(modalPicture, 5);
         Assertions.assertTrue(modalPicture.isDisplayed());
     }
 }
+
+//
+//    @FindBy(css = "div[class*=\"pp_pic_holder\"]")
+//    private WebElement modalPicture;
+//
+//    public void checkModalWindow() {
+//        WebDriverWait wait = new WebDriverWait(driver, (5));
+//        wait.until(ExpectedConditions.visibilityOf(modalPicture));
+//        Assertions.assertTrue(modalPicture.isDisplayed());
 
 
 
