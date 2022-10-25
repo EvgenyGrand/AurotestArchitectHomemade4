@@ -17,7 +17,7 @@ public class ModalWindowThirdTask extends CookiePage{
    @FindBy(css = "input[type='password']")
    private WebElement password;
 
-    @FindBy(css = "button[class='new-button new-button_full new-button_blue new-button_md']")
+    @FindBy(css = "button[class*='new-button new-button_full']")
    private WebElement buttonLK;
 
     public void inputCreds(){

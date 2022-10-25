@@ -17,12 +17,5 @@ public class CookiePage extends AbsBasePages {
 
     }
 
-//    @FindBy(css = "input[type='text'][placeholder='Электронная почта']")
-//    private WebElement login;
-//
-//    @FindBy(css = "input[type='password']")
-//    private WebElement password;
-//
-//    @FindBy(css = "button[class='new-button new-button_full new-button_blue new-button_md']")
-//    private WebElement buttonLK;
+
 }

@@ -33,17 +33,17 @@ public class SecondTaskTest {
         CheckmodalWindow checkmodalWindow = new CheckmodalWindow(driver);
         picturePageSecondTask.openSecondTask();
             picturePageSecondTask.openModalWindow();
-            checkmodalWindow.checkModalWindow();
+//            checkmodalWindow.checkModalWindow(3);
 
 
 
     }
-    @AfterEach
-    public void close() {
-        if(this.driver != null) {
-            this.driver.close();
-            this.driver.quit();
-        }
-
-    }
+//    @AfterEach
+//    public void close() {
+//        if(this.driver != null) {
+//            this.driver.close();
+//            this.driver.quit();
+//        }
+//
+//    }
 }

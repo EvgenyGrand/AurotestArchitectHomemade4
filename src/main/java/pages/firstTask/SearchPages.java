@@ -13,9 +13,8 @@ public class SearchPages extends AbsBasePages {
     public SearchPages(WebDriver driver) {
         super(driver);
     }
-    @FindBy(css = "div.ikg2IXiCD14iVX7AdZo1 > h2 > a > span")
+    @FindBy(css = "article[id='r1-0']>div>h2>a>span")
     private List<WebElement> titleOtus;
-
     public void checkRecord(int index){
         Assertions.assertEquals("Онлайн‑курсы для профессионалов, дистанционное обучение современным ...",titleOtus.get(--index).getText());
     }
