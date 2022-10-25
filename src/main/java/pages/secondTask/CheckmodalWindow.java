@@ -33,7 +33,7 @@ public class CheckmodalWindow extends PicturePageSecondTask {
 //        Assertions.assertTrue(modalPictures.get(index).isDisplayed());
 //    }
 
-    @FindBy(css = "div[class=\"pp_pic_holder light_rounded\"]")
+    @FindBy(css = "div[class*=\"pp_pic_holder\"]")
     private WebElement modalPicture;
 
     public void checkModalWindow() {
