@@ -39,12 +39,12 @@ public class SecondTaskTest {
 
 
     }
-//    @AfterEach
-//    public void close() {
-//        if(this.driver != null) {
-//            this.driver.close();
-//            this.driver.quit();
-//        }
-//
-//    }
+    @AfterEach
+    public void close() {
+        if(this.driver != null) {
+            this.driver.close();
+            this.driver.quit();
+        }
+
+    }
 }

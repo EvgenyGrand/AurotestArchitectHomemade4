@@ -1,10 +1,13 @@
 package pages;
 
+import net.bytebuddy.asm.Advice;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.logging.LogManager;
 
 public abstract class AbsBasePages {
 
@@ -17,10 +20,12 @@ public abstract class AbsBasePages {
     protected WebDriver driver;
     protected WebDriverWait wait;
 
+
     public AbsBasePages(WebDriver driver) {
         this.driver = driver;
         this.wait = wait;
         PageFactory.initElements(driver, this);
+
     }
 
     public void open() {

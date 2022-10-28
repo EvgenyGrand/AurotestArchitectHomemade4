@@ -26,7 +26,7 @@ public class PicturePageSecondTask extends AbsBasePages {
 //    @FindBy(css = "a[href='assets/images/p4.jpg'] >div[class='content-overlay']")
 //    private WebElement picture;
 
-    @FindBy(css="li[data-type*='cat']")
+    @FindBy(css="li[data-type*='cat'] .image-zoom")
     private List<WebElement>pictures;
 
 
@@ -35,7 +35,7 @@ public class PicturePageSecondTask extends AbsBasePages {
     public void openModalWindow() throws InterruptedException {
         System.out.println(pictures.size());
         driver.manage().window().maximize();
-        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", pictures.get(5));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", pictures.get(4));
 
 
     }
