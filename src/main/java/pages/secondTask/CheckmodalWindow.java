@@ -26,14 +26,3 @@ public class CheckmodalWindow extends PicturePageSecondTask {
     }
 }
 
-//
-//    @FindBy(css = "div[class*=\"pp_pic_holder\"]")
-//    private WebElement modalPicture;
-//
-//    public void checkModalWindow() {
-//        WebDriverWait wait = new WebDriverWait(driver, (5));
-//        wait.until(ExpectedConditions.visibilityOf(modalPicture));
-//        Assertions.assertTrue(modalPicture.isDisplayed());
-
-
-
