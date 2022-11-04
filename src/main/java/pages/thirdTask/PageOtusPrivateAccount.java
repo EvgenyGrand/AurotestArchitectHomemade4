@@ -1,14 +1,16 @@
 package pages.thirdTask;
 
+import components.InputCredsPrivateAccount;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import pages.abspages.AbsBasePages;
 
-public class PageOtusPrivateAccount extends AbsBasePages{
+public class PageOtusPrivateAccount extends InputCredsPrivateAccount {
     public PageOtusPrivateAccount(WebDriver driver) {
         super(driver);
     }
+
 
     @FindBy(css = "input[type='text'][placeholder='Электронная почта']")
    private WebElement login;
