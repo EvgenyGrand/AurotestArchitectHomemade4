@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.AbsBasePages;
 
-public class ModalWindowThirdTask extends CookiePage{
+public class ModalWindowThirdTask extends AbsBasePages{
     public ModalWindowThirdTask(WebDriver driver) {
         super(driver);
     }
@@ -22,8 +22,6 @@ public class ModalWindowThirdTask extends CookiePage{
    private WebElement buttonLK;
 
     public void inputCreds(){
-//        WebDriverWait wait = new WebDriverWait(driver, 5);
-//        wait.until(ExpectedConditions.visibilityOf(login));
         explicitWait(login,5);
         login.clear();
         login.sendKeys(inputLogin());

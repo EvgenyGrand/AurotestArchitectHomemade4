@@ -6,12 +6,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pages.AbsBasePages;
 
 import java.time.Duration;
 import java.util.List;
 import java.util.function.BooleanSupplier;
 
-public class CheckmodalWindow extends PicturePageSecondTask {
+public class CheckmodalWindow extends AbsBasePages {
 
     public CheckmodalWindow(WebDriver driver) {
         super(driver);
