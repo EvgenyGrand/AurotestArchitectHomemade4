@@ -4,13 +4,12 @@ import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import pages.AbsBasePages;
+import pages.abspages.AbsBasePages;
 
-import java.util.Collections;
 import java.util.List;
 
-public class SearchPages extends AbsBasePages {
-    public SearchPages(WebDriver driver) {
+public class SearchPagesDdgOtus extends AbsBasePages {
+    public SearchPagesDdgOtus(WebDriver driver) {
         super(driver);
     }
     @FindBy(css = "h2 span")

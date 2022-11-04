@@ -10,7 +10,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import pages.secondTask.CheckmodalWindow;
-import pages.secondTask.PicturePageSecondTask;
+import pages.secondTask.MainPagesModalWindows;
 
 public class SecondTaskTest {
     private WebDriver driver;
@@ -29,7 +29,7 @@ public class SecondTaskTest {
 
     @Test
     public void testOpenModalWindow() throws InterruptedException {
-        PicturePageSecondTask picturePageSecondTask = new PicturePageSecondTask(driver);
+        MainPagesModalWindows picturePageSecondTask = new MainPagesModalWindows(driver);
         CheckmodalWindow checkmodalWindow = new CheckmodalWindow(driver);
         picturePageSecondTask.openSecondTask();
             picturePageSecondTask.openModalWindow();

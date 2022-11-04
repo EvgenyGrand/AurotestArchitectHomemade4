@@ -3,11 +3,11 @@ package pages.firstTask;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import pages.AbsBasePages;
+import pages.abspages.AbsBasePages;
 
-public class MainPages extends AbsBasePages {
+public class MainPagesDdg extends AbsBasePages {
 
-    public MainPages(WebDriver driver) {
+    public MainPagesDdg(WebDriver driver) {
         super(driver);
 
 
@@ -21,10 +21,10 @@ public class MainPages extends AbsBasePages {
 
 
 
-    public SearchPages searchOtus(String request) {
+    public SearchPagesDdgOtus searchOtus(String request) {
         inputwindow.sendKeys(request);
         searchbutton.click();
-        return new SearchPages(driver);
+        return new SearchPagesDdgOtus(driver);
 
 
     }

@@ -9,8 +9,8 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
-import pages.thirdTask.CookiePage;
-import pages.thirdTask.ModalWindowThirdTask;
+import pages.thirdTask.MainPageOtus;
+import pages.thirdTask.PageOtusPrivateAccount;
 
 public class ThirdTaskTest {
     private WebDriver driver;
@@ -30,8 +30,8 @@ public class ThirdTaskTest {
     @Test
     public void testCheckCookie() throws InterruptedException {
         driver.manage().window().maximize();
-        CookiePage cookiePage = new CookiePage(driver);
-        ModalWindowThirdTask modalWindowThirdTask = new ModalWindowThirdTask(driver);
+        MainPageOtus cookiePage = new MainPageOtus(driver);
+        PageOtusPrivateAccount modalWindowThirdTask = new PageOtusPrivateAccount(driver);
         cookiePage.openThirdTask();
         cookiePage.clickRegistrationButton();
         modalWindowThirdTask.inputCreds();

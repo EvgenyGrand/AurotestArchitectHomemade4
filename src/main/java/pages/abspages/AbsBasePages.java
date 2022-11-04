@@ -1,4 +1,4 @@
-package pages;
+package pages.abspages;
 
 import net.bytebuddy.asm.Advice;
 import org.openqa.selenium.WebDriver;

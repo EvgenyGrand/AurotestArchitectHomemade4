@@ -1,7 +1,7 @@
 package components;
 
 import org.openqa.selenium.WebDriver;
-import pages.AbsBasePages;
+import pages.abspages.AbsBasePages;
 
 public abstract class ModalWindow extends AbsBasePages {
 
