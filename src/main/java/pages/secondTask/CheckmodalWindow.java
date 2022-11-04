@@ -1,5 +1,6 @@
 package pages.secondTask;
 
+import components.ModalWindow;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,7 +13,7 @@ import java.time.Duration;
 import java.util.List;
 import java.util.function.BooleanSupplier;
 
-public class CheckmodalWindow extends AbsBasePages {
+public class CheckmodalWindow extends ModalWindow {
 
     public CheckmodalWindow(WebDriver driver) {
         super(driver);
