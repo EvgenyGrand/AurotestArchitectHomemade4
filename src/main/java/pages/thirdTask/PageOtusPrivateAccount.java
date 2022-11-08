@@ -4,6 +4,7 @@ import components.InputCredsPrivateAccount;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.abspages.AbsBasePages;
 
 public class PageOtusPrivateAccount extends InputCredsPrivateAccount {
@@ -22,7 +23,7 @@ public class PageOtusPrivateAccount extends InputCredsPrivateAccount {
    private WebElement buttonLK;
 
     public void inputCreds(){
-        explicitWait(login,5);
+        explicitWait(5, ExpectedConditions.visibilityOf(login));
         login.clear();
         login.sendKeys(inputLogin());
         password.clear();

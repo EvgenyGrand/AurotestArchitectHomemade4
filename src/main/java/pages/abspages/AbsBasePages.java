@@ -4,6 +4,7 @@ import net.bytebuddy.asm.Advice;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -39,9 +40,9 @@ public abstract class AbsBasePages {
         driver.get(hostnameTaskThree);
     }
 
-    public void explicitWait(WebElement element, int time) {
+    public void explicitWait( int time, ExpectedCondition condition) {
         WebDriverWait wait = new WebDriverWait(driver, time);
-        wait.until(ExpectedConditions.visibilityOf(element));
+        wait.until(condition);
 
     }
 }
