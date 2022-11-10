@@ -47,19 +47,3 @@ public class MainPagesModalWindows extends ModalWindow {
 }
 
 
-//public class PicturePageSecondTask extends AbsBasePages {
-//
-//    public PicturePageSecondTask(WebDriver driver) {
-//        super(driver);
-//    }
-//
-//    @FindBy(css = "input[type='search'][placeholder='Search here...']")
-//    private WebElement scroll;
-//
-//    @FindBy(css = "a[href='assets/images/p4.jpg'] >div[class='content-overlay']")
-//    private WebElement picture;
-//
-//
-//    public void openModalWindow() throws InterruptedException {
-//        driver.manage().window().maximize();
-//        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", picture);
