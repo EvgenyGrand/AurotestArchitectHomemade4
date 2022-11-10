@@ -18,8 +18,10 @@ public abstract class AbsBasePages {
 
 
 
+
     protected WebDriver driver;
     protected WebDriverWait wait;
+    protected int time = 5;
 
 
     public AbsBasePages(WebDriver driver) {

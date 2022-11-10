@@ -26,6 +26,7 @@ public class FirstTaskTest {
 
     @Test
     public void testCheckDDC() {
+        driver.manage().window().maximize();
         MainPagesDdg mainPages = new MainPagesDdg(driver);
         mainPages.open();
         mainPages.searchOtus("Отус")

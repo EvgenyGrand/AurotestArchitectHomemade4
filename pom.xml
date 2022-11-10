@@ -27,6 +27,7 @@
         <third.url>https://otus.ru</third.url>
         <login>Evgeny.Grand@mail.ru</login>
         <password>Lufthansa12</password>
+        <explisityWait>5</explisityWait>
         <test.project.language>RU</test.project.language>
 
         <webdriver.timeouts.implicitlywait>5000</webdriver.timeouts.implicitlywait>

@@ -1,5 +1,6 @@
 package pages.secondTask;
 
+import components.modalwindow.ModalWindow;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,7 +9,7 @@ import pages.abspages.AbsBasePages;
 
 import java.util.List;
 
-public class MainPagesModalWindows extends AbsBasePages {
+public class MainPagesModalWindows extends ModalWindow {
 
     public MainPagesModalWindows(WebDriver driver) {
         super(driver);
@@ -22,8 +23,6 @@ public class MainPagesModalWindows extends AbsBasePages {
     private List<WebElement>pictures;
 
 
-
-
     public void openModalWindow() throws InterruptedException {
         driver.manage().window().maximize();
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", pictures.get(4));
@@ -31,6 +30,20 @@ public class MainPagesModalWindows extends AbsBasePages {
 
     }
 
+    @Override
+    public void modalShouldNotBePresent() {
+
+    }
+
+    @Override
+    public void modalShouldNotBeVisible() {
+
+    }
+
+    @Override
+    public void modalShouldBeVisible() {
+
+    }
 }
 
 

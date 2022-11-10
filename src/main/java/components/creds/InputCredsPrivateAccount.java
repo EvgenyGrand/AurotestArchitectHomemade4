@@ -1,4 +1,4 @@
-package components;
+package components.creds;
 
 import org.openqa.selenium.WebDriver;
 import pages.abspages.AbsBasePages;
@@ -24,4 +24,5 @@ public class InputCredsPrivateAccount extends AbsBasePages {
         System.getProperty(password);
         return password;
     }
+
     }
